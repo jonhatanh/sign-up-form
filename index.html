@@ -23,7 +23,7 @@
                 <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span>now</span> to get started.</p>
                 <p>You <span>know</span> you want to.</p>
             </div>
-            <form action="">
+            <form action="/my-url" method="post" id="form">
                 <fieldset>
                     <header>
                         <p>Let's do this!</p>
@@ -37,31 +37,36 @@
                         <div class="input-container">
                             <label for="last_name">Last Name</label>
                             <input type="text" id="last_name" name="last_name" minlength="1" maxlength="45" required/>
+                            <span></span>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-container">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required/>
+                            <span></span>
                         </div>
                         <div class="input-container">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required/>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" minlength="10" maxlength="10" title="Length: 10. Only Digits." required/>
+                            <span></span>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-container">
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" minlength="8" required/>
+                            <span></span>
                         </div>
                         <div class="input-container">
                             <label for="confirm_password">Confirm Password</label>
                             <input type="password" id="confirm_password" name="confirm_password" minlength="8" required/>
+                            <span></span>
                         </div>
                     </div>
                 </fieldset>
                 <footer>
-                    <button type="submit">Create Account</button>
+                    <button type="submit" id="submitBtn">Create Account</button>
                     <p>Already have an account? <a href="#">Log in</a></p>
                 </footer>
             </form>
