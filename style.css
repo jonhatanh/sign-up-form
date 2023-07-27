@@ -1,9 +1,228 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap");
+:root {
+  --padding: 20px;
+}
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  background-color: whitesmoke;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.picture-container {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  background-image: url(./assets/sunflowerBackground.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.picture-container p {
+  bottom: 5px;
+  opacity: 0.7;
+  text-align: center;
+}
+.picture-container p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.banner, .picture-container p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: white;
+  margin: auto;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  gap: 0.5rem;
+}
+.banner img {
+  width: 3rem;
+  filter: invert(1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form form header {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+.form form fieldset {
+  background-color: white;
+  padding: var(--padding);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding);
+}
+.form form footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--padding) var(--padding) 0;
+}
+.form form footer button {
+  padding: 13px 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: yellow;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.form form footer p {
+  margin-top: var(--padding);
+  margin-bottom: var(--padding);
+  font-size: 0.9rem;
+}
+.form form footer p a {
+  text-decoration: none;
+  color: yellowgreen;
+}
+
+.info {
+  padding: var(--padding);
+  font-weight: 700;
+}
+.info p {
+  margin-top: var(--padding);
+  margin-bottom: var(--padding);
+  line-height: 1.3rem;
+}
+.info p span {
+  font-style: italic;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.input-container label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: gray;
+}
+.input-container input {
+  padding: 7px 3px;
+}
+
+@media (min-width: 640px) {
+  .info {
+    width: 65%;
+    margin: 0 auto;
+  }
+  .info p {
+    text-align: center;
+  }
+  .input-container input {
+    width: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --padding: 40px;
+  }
+  body {
+    display: flex;
+  }
+  .container {
+    flex-direction: row;
+    flex: 1;
+  }
+  .picture-container {
+    position: relative;
+    height: 100%;
+    max-width: 40%;
+  }
+  .banner {
+    top: 29%;
+    margin: 0;
+    gap: 1rem;
+  }
+  .info {
+    width: 100%;
+    margin: 0;
+    padding: 0 var(--padding);
+  }
+  .info p {
+    text-align: start;
+  }
+  .form {
+    flex-grow: 3;
+  }
+  .form form header {
+    margin-bottom: 0;
+  }
+  .form form fieldset {
+    justify-content: start;
+    align-items: start;
+  }
+  .form form footer {
+    align-items: start;
+  }
+  .input-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .input-container input {
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .input-group {
+    gap: 80px;
+  }
+  .input-container input {
+    width: 100%;
+  }
+}
+@media (min-width: 1536px) {
+  .input-group {
+    justify-content: start;
+  }
+  .input-container {
+    max-width: 300px;
+  }
+  .input-container input {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
