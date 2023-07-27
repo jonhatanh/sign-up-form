@@ -50,17 +50,34 @@ body {
 
 .banner {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   top: 0;
   bottom: 0;
-  height: 5rem;
+  height: 6rem;
   background-color: rgba(0, 0, 0, 0.5);
   gap: 0.5rem;
 }
 .banner img {
-  width: 3rem;
+  width: 2.5rem;
   filter: invert(1);
+}
+.banner div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.banner div span {
+  font-size: 12px;
+}
+.banner div a {
+  text-decoration: none;
+  color: rgb(252, 255, 82);
+  transition: all 0.4s;
+}
+.banner div a:hover {
+  text-shadow: 0 0 5px black;
 }
 
 .form {
@@ -214,7 +231,7 @@ body {
     max-width: 40%;
   }
   .banner {
-    top: 29%;
+    top: 31.7%;
     margin: 0;
     gap: 1rem;
   }
