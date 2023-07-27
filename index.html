@@ -31,31 +31,32 @@
                     <div class="input-group">
                         <div class="input-container">
                             <label for="first_name">First Name</label>
-                            <input type="text" id="first_name" name="first_name" />
+                            <input type="text" id="first_name" name="first_name" minlength="1" maxlength="45" required/>
+                            <span></span>
                         </div>
                         <div class="input-container">
                             <label for="last_name">Last Name</label>
-                            <input type="text" id="last_name" name="last_name" />
+                            <input type="text" id="last_name" name="last_name" minlength="1" maxlength="45" required/>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-container">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" />
+                            <input type="email" id="email" name="email" required/>
                         </div>
                         <div class="input-container">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" />
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required/>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-container">
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password" />
+                            <input type="password" id="password" name="password" minlength="8" required/>
                         </div>
                         <div class="input-container">
                             <label for="confirm_password">Confirm Password</label>
-                            <input type="password" id="confirm_password" name="confirm_password" />
+                            <input type="password" id="confirm_password" name="confirm_password" minlength="8" required/>
                         </div>
                     </div>
                 </fieldset>

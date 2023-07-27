@@ -92,10 +92,14 @@ body {
   padding: 13px 40px;
   border: none;
   border-radius: 10px;
-  background-color: yellow;
+  background-color: rgb(252, 255, 82);
   font-weight: 700;
   font-size: 1rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+.form form footer button:hover {
+  background-color: rgb(255, 235, 0);
 }
 .form form footer p {
   margin-top: var(--padding);
@@ -104,7 +108,12 @@ body {
 }
 .form form footer p a {
   text-decoration: none;
-  color: yellowgreen;
+  color: rgb(252, 255, 82);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s;
+}
+.form form footer p a:hover {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
 }
 
 .info {
@@ -141,6 +150,16 @@ body {
 }
 .input-container input {
   padding: 7px 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.input-container input:focus {
+  border-color: blue;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.input-container input.error {
+  border-color: red;
 }
 
 @media (min-width: 640px) {
